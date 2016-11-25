@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YP_ChoiceTableSectionFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18L-NG-ZXv">
+                    <rect key="frame" x="10" y="8" width="67" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="IGn-sJ-ILa"/>
+                    </constraints>
+                    <state key="normal" title="重置">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="reSetAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7wR-v0-bkA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du2-T2-Hzb">
+                    <rect key="frame" x="261" y="8" width="67" height="32"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.49803921569999998" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="VCv-9e-KOi"/>
+                    </constraints>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="sureAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="U6V-Bh-ufM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="du2-T2-Hzb" secondAttribute="bottom" constant="8" id="HuA-Ky-kR7"/>
+                <constraint firstAttribute="trailing" secondItem="du2-T2-Hzb" secondAttribute="trailing" constant="10" id="VBY-SQ-HeO"/>
+                <constraint firstItem="du2-T2-Hzb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="gO3-z3-lfM"/>
+                <constraint firstItem="18L-NG-ZXv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="hph-FZ-J2G"/>
+                <constraint firstAttribute="bottom" secondItem="18L-NG-ZXv" secondAttribute="bottom" constant="8" id="n5A-rz-bTU"/>
+                <constraint firstItem="18L-NG-ZXv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="rge-Ko-YE6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="reSetButton" destination="18L-NG-ZXv" id="NwG-fh-iAk"/>
+                <outlet property="sureButton" destination="du2-T2-Hzb" id="VVQ-PI-l78"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="-255"/>
+        </view>
+    </objects>
+</document>

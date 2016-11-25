@@ -1,0 +1,52 @@
+//
+//  PrefixHeader.pch
+//  YP_ChoiseKinds
+//
+//  Created by 王烨谱 on 2016/11/25.
+//  Copyright © 2016年 王烨谱. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIColor+String.h"//通过RGB获取颜色
+#import "NSString+Tools.h"
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <objc/runtime.h>
+#import "UIView+ViewController.h"
+
+
+/**
+ * 列表数据获取状态
+ */
+typedef enum : NSUInteger {
+    ListDataStatusNormal = 0, // 常态, 数据还未加载下来
+    ListDataStatusHadData = 1,// 数据请求下来, 有数据
+    ListDataStatusFailed = 2,// 数据请求失败, 有数据
+    
+    ListDataStatusNoData = 3, // 数据请求下来, 无数据
+    ListDataStatusFailedNoData = 4,// 数据请求失败, 无数据
+    ListDataStatusFailedNoNetwork = 5,// 数据请求失败, 无网络
+    ListDataStatusFailedTimeOut = 6,// 数据请求失败, 请求超时
+}ListDataStatus;
+
+/**
+ 网络不正常提示文本
+ */
+#define MissInternet @"网络请求失败"
+
+#define kNetworkStatusServerBusyMessage     @"服务器繁忙"
+#define kNetworkStatusNoNetworkMessage     @"无网络,请设置网络"
+#define kNetworkStatusTimeOutMessage     @"请求超时"
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+// 获取设备屏幕的物理尺寸
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#endif /* PrefixHeader_pch */

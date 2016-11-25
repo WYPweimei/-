@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JRM-zj-NvN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="g4z-B1-Cpx">
+            <objects>
+                <navigationController id="JRM-zj-NvN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yrz-TK-bK9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LT6-SD-vZ9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKl-1f-ukS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1186" y="84"/>
+        </scene>
+        <!--测试-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-cc-iVy">
+                                <rect key="frame" x="0.0" y="64" width="315" height="46"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ub6-Ry-YS6" userLabel="topView" customClass="YP_TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="46"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="315" id="BjY-tD-C6L"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ub6-Ry-YS6" secondAttribute="bottom" id="An6-ZK-IdX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ub6-Ry-YS6" secondAttribute="trailing" id="T03-j1-wfr"/>
+                                    <constraint firstItem="Ub6-Ry-YS6" firstAttribute="leading" secondItem="kNf-cc-iVy" secondAttribute="leading" id="XBw-0w-Ql8"/>
+                                    <constraint firstAttribute="height" constant="46" id="acq-kd-FSL"/>
+                                    <constraint firstItem="Ub6-Ry-YS6" firstAttribute="top" secondItem="kNf-cc-iVy" secondAttribute="top" id="tb6-l3-iew"/>
+                                    <constraint firstItem="Ub6-Ry-YS6" firstAttribute="centerY" secondItem="kNf-cc-iVy" secondAttribute="centerY" id="wUD-ff-Gga"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvt-Qz-yuZ">
+                                <rect key="frame" x="315" y="64" width="60" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="k6a-ap-fQb"/>
+                                </constraints>
+                                <state key="normal" title="筛选">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="FiltrateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u6x-7t-Z6F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kNf-cc-iVy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2M7-pb-f6o"/>
+                            <constraint firstAttribute="trailing" secondItem="kNf-cc-iVy" secondAttribute="trailing" constant="60" id="7Jj-EH-PtX"/>
+                            <constraint firstItem="jvt-Qz-yuZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ma6-bG-jBB"/>
+                            <constraint firstAttribute="trailing" secondItem="jvt-Qz-yuZ" secondAttribute="trailing" id="kNX-1A-L2m"/>
+                            <constraint firstItem="kNf-cc-iVy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uX9-Lq-tfX"/>
+                            <constraint firstItem="jvt-Qz-yuZ" firstAttribute="leading" secondItem="kNf-cc-iVy" secondAttribute="trailing" id="vJR-az-8if"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="测试" id="cOh-fw-Sh2"/>
+                    <connections>
+                        <outlet property="scrollView" destination="kNf-cc-iVy" id="sxh-qt-UEc"/>
+                        <outlet property="scrollViewContentWidthCons" destination="BjY-tD-C6L" id="rfQ-nz-W5K"/>
+                        <outlet property="topView" destination="Ub6-Ry-YS6" id="e4Q-fd-Ldo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="83"/>
+        </scene>
+    </scenes>
+</document>
